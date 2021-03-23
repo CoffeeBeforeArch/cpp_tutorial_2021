@@ -1,12 +1,21 @@
-// Tutorial example 12
-// Basic multi-threading in C++
+// Tutorial example 13
+// Locks in C++ in C++
 
 #include <iostream>
+#include <mutex>
 #include <thread>
 #include <vector>
 
+// Create a global mutex
+std::mutex m;
+
 // Print function called by each thread
-void print(int tid) { std::cout << "PRINTING FROM THREAD " << tid << '\n'; }
+void print(int tid) {
+  // Grab the lock before printing
+  m.lock();
+  std::cout << "PRINTING FROM THREAD " << tid << '\n';
+  m.unlock();
+}
 
 int main() {
   // Launch threads
