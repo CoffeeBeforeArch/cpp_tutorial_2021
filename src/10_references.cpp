@@ -1,4 +1,4 @@
-// Tutorial example 9
+// Tutorial example 10
 // A basic example of references
 
 #include <iostream>
@@ -21,4 +21,6 @@ int main() {
     std::cout << i << ' ';
   }
   std::cout << '\n';
+
+  return 0;
 }

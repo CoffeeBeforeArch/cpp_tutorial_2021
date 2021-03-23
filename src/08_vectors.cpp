@@ -20,4 +20,6 @@ int main() {
     std::cout << i << ' ';
   }
   std::cout << '\n';
+
+  return 0;
 }
